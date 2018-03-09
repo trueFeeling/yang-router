@@ -1118,8 +1118,10 @@ function check(req) {
         req.query.money = "土豪你好！！！！！！！！！！";
     }
     if (!req.body) {
-        //req.body = {};
-        //req.body.mes = `祝您用餐愉快, 您目前是在: ${location.hash}`
+        req.body = {};
+        req.body.mes = "\u795D\u60A8\u7528\u9910\u6109\u5FEB, \u60A8\u76EE\u524D\u662F\u5728: " + location.hash;
+    } else if (JSON.stringify(req.body) === "{}") {
+        req.body.mes = "\u795D\u60A8\u7528\u9910\u6109\u5FEB, \u60A8\u76EE\u524D\u662F\u5728: " + location.hash;
     }
     return;
 }

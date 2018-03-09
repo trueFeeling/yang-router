@@ -6,6 +6,8 @@ export default function check(req){
     if(!req.body){
         req.body = {};
         req.body.mes = `祝您用餐愉快, 您目前是在: ${location.hash}`
+    }else if(JSON.stringify(req.body) === "{}"){
+        req.body.mes = `祝您用餐愉快, 您目前是在: ${location.hash}`
     }
     return
 }
