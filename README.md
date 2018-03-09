@@ -16,7 +16,9 @@ For production
 # npm run build
 ```
 ### 工程
-执行npm run dev之后，打开localhost:8080就能看到效果。examples下面的app.js是入口文件，需要在这里配置路由，routes里面是每个路由对应的controller，
+执行npm run dev之后，打开localhost:8080就能看到效果。examples下面的app.js是入口文件，需要在这里配置路由，routes里面是每个路由对应的controller
+
+- [demo](https://truefeeling.github.io/#/home/?index=home)
 
 ### 思路
 目前只实现了hash，整个思路是，我们有一个主文件Router.js，这个文件中我们定义了两大方法，use和route
