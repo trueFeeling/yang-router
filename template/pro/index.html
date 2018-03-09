@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0, user-scalable = 0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>外卖点餐</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  #app{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #nav {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: deepskyblue;
+    color: ghostwhite;
+    width: 100vw;
+    height: 50px;
+  }
+  #container{
+    margin-top:50px;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  #footer{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    background-color: white;
+    color: gray;
+    width: 100vw;
+  }
+  #tab{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    width: 100vw;
+  }
+  #tab li{
+    height: 50px;
+    width: 25%;
+    border: 2px solid #ddd;
+    list-style: none;
+    text-align: center;
+  }
+</style>
+
+<body>
+  <div id="app">
+    <nav id="nav">外卖么</nav>
+    <main id="container">
+        <div id="router"></div>
+    </main>
+    <footer id="footer">
+      <ul id="tab">
+        <li onclick="app.go('/home/waimai?index=home', {mes: '欢迎回来', entry: '进入外卖么世界'})">外卖</li>
+        <li onclick="app.go('/order/fruit?price=100&time=now', {mes: '订单'})">订单</li>
+        <li onclick="app.go('/find/food?where=world&money=infinite', {mes: '发现更多美食'})">发现</li>
+        <li onclick="app.go('/about/yang?membership=vip&vipout=forever', {mes:'you are 666' })">我的</li>
+      </ul>
+    </footer>
+  </div>
+  <script src="./bundle.min.js"></script>
+
+</body>
+
+</html>

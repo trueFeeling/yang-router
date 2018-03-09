@@ -1,0 +1,38 @@
+{
+  "name": "yang-router",
+  "version": "1.0.0",
+  "description": "front-end router using hash or history APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "add:dev":"yang cp ./template/dev/index.html ./examples/",
+    "add:build":"yang cp ./template/pro/index.html ./examples/",
+    "dev": "cross-env NODE_ENV=development webpack && npm run dev:start",
+    "dev:start": "npm run add:dev && node ./examples/www/server.js",
+    "build": "cross-env NODE_ENV=production webpack && npm run build:start",
+    "build:start": "npm run add:build && node ./examples/www/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trueFeeling/yang-router.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trueFeeling/yang-router/issues"
+  },
+  "homepage": "https://github.com/trueFeeling/yang-router#readme",
+  "dependencies": {
+    "path-to-regexp": "^2.2.0",
+    "yangester-cli": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-es2015": "^6.24.1",
+    "cross-env": "^5.1.3",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "webpack": "^3.5.5",
+    "webpack-merge": "^4.1.0"
+  }
+}
